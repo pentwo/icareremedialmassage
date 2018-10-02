@@ -15,6 +15,7 @@ var bookingPregnancyButton = new timelyButton("icareremedialmassage", {
   dontCreateButton: true
 });
 
+//navbar-burger
 document.addEventListener("DOMContentLoaded", () => {
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(
@@ -38,36 +39,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// let testimony = console.log("testimony: ", testimony);
+//Setting Testimony Section
 let testimonyQuote = document.querySelector("#testimony-quote");
 let testimonyName = document.querySelector("#testimony-name");
 let blockquote = document.querySelector(".blockquote");
 
-// const testimonys = getTestimonys();
-// console.log("testimonys: ", testimonys);
-
-async function getTestimonys() {
+async function getTestimonies() {
   return await fetch("../testimony.json")
     .then(res => res.json())
     .then(data => data);
 }
 
 async function setTestimony() {
-  let arr = await getTestimonys();
-  let rendomNum = (Math.random() * arr.length) | 0;
+  let arr = await getTestimonies();
+  let randomNum = (Math.random() * arr.length) | 0;
 
   const html = setTestimonyTemp(arr);
   blockquote.innerHTML = html;
-  // testimonyQuote.innerText = arr[rendomNum].Testimony;
-  // testimonyName.innerText = arr[rendomNum].Name;
 }
 setTestimony();
 
 let interval = 3000;
 randomQuote();
 function randomQuote() {
-  let rendomNum = (Math.random() * 4) | 0;
-  let ele = document.querySelector(`#testimony-${rendomNum}`);
+  let randomNum = (Math.random() * 4) | 0;
+  let ele = document.querySelector(`#testimony-${randomNum}`);
   let eleShow = document.querySelector(".show");
   console.log("eleShow: ", eleShow);
   if (eleShow) {
@@ -97,3 +93,12 @@ function setTestimonyTemp(arr) {
   }, "");
   return html;
 }
+
+// Google Analytics
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag("js", new Date());
+gtag("config", "UA-126836067-1");
