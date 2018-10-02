@@ -54,28 +54,12 @@ async function setTestimony() {
   let arr = await getTestimonies();
   let randomNum = (Math.random() * arr.length) | 0;
 
-  const html = setTestimonyTemp(arr);
+  const html = setTestimonyTemplate(arr);
   blockquote.innerHTML = html;
+  showQuote(0);
 }
 setTestimony();
-
-let interval = 3000;
-randomQuote();
-function randomQuote() {
-  let randomNum = (Math.random() * 4) | 0;
-  let ele = document.querySelector(`#testimony-${randomNum}`);
-  let eleShow = document.querySelector(".show");
-  console.log("eleShow: ", eleShow);
-  if (eleShow) {
-    eleShow.classList.remove("show");
-  }
-  if (ele) {
-    ele.classList.add("show");
-  }
-  setTimeout(randomQuote, interval);
-}
-
-function setTestimonyTemp(arr) {
+function setTestimonyTemplate(arr) {
   let html = ``;
   html += arr.reduce((pre, cur, i) => {
     return (pre += `
@@ -92,6 +76,31 @@ function setTestimonyTemp(arr) {
     </div>`);
   }, "");
   return html;
+}
+
+function showQuote(num) {
+  let ele = document.querySelector(`#testimony-${num}`);
+  console.log("ele: ", ele);
+  let eleShow = document.querySelector(".show");
+  if (eleShow) {
+    eleShow.classList.remove("show");
+  }
+  if (ele) {
+    ele.classList.add("show");
+  }
+}
+
+let interval = 10000;
+let initial = 1;
+randomQuote();
+function randomQuote() {
+  // let randomNum = (Math.random() * 4) | 0;
+  if (initial > 3) {
+    initial = 0;
+  }
+  showQuote(initial);
+  initial++;
+  setTimeout(randomQuote, interval);
 }
 
 // Google Analytics
