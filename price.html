@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iCare Remedial Massage</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+
+  <!-- timely booking widget -->
+  <script id="timelyScript" src="//book.gettimely.com/widget/book-button-v1.4.js"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar is-transparent ">
+    <div class="navbar-brand">
+      <a class="navbar-item navbar-logo is-size-1" href="index.html">
+        iCare
+      </a>
+      <div class="navbar-burger burger" data-target="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">
+          <i class="fas fa-home"></i>
+          &nbsp; Home
+        </a>
+        <!-- <a class="navbar-item" href="about.html">
+          <i class="fas fa-heart"></i>
+          &nbsp; About Us
+        </a> -->
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="services.html">
+            <i class="fas fa-hand-holding-heart"></i>
+            &nbsp; Services
+          </a>
+          <div class="navbar-dropdown is-boxed">
+            <a class="navbar-item" href="services.html#remedial">
+              Remedial/Sports Massage
+            </a>
+            <a class="navbar-item" href="services.html#pregnancy">
+              Pregnancy Massage
+            </a>
+            <a class="navbar-item" href="services.html#aromatherapy">
+              Aromatherapy Massage
+            </a>
+
+          </div>
+        </div>
+        <a class="navbar-item" href="price.html">
+          <i class="fas fa-dollar-sign"></i>
+          &nbsp; Price
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="button is-primary" href="javascript:void(0);" onclick="bookingButton.start();">
+                <span class="icon">
+                  <i class="fas fa-calendar-alt"></i>
+                </span>
+                <span>Book Now</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <div class="column is-8-desktop is-offset-2-desktop">
+          <h1 class="title is-1 is-spaced">
+            iCare Remedial Massage
+          </h1>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section services"></section>
+  <section class="section service">
+    <div class="container">
+      <h1 class="title">
+        Remedial/Sports Massage
+      </h1>
+      <div class="columns">
+        <div class="column is-half-desktop is-offset-one-quarter-desktop">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <th>Time</th>
+              <th>Price</th>
+              <th>with Aromatherapy (+$10)</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>30 mins</td>
+                <td>$45</td>
+                <td>$55</td>
+              </tr>
+              <tr>
+                <td>45 mins</td>
+                <td>$65</td>
+                <td>$75</td>
+              </tr>
+              <tr class="">
+                <td>1 hour </td>
+                <td>$85</td>
+                <td>$95</td>
+              </tr>
+              <tr class="is-selected">
+                <td>1 hour 15 mins</td>
+                <td>$110</td>
+                <td>$120 <span class="tag is-Danger">Most Popular</span></td>
+              </tr>
+              <tr>
+                <td>1 hour 30 mins</td>
+                <td>$130</td>
+                <td>$140</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="control">
+            <a class="button is-primary" href="javascript:void(0);" onclick="bookingRemedialButton.start();">
+              <span class="icon">
+                <i class="fas fa-calendar-alt"></i>
+              </span>
+              <span>Book Now</span>
+            </a>
+          </p>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section service">
+    <div class="container">
+      <h1 class="title">
+        Aromatherapy Massage
+      </h1>
+      <div class="columns">
+        <div class="column is-half-desktop is-offset-one-quarter-desktop">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <th>Time</th>
+              <th>Price</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>30 mins</td>
+                <td>$45</td>
+              </tr>
+              <tr>
+                <td>45 mins</td>
+                <td>$65</td>
+              </tr>
+              <tr class="is-selected">
+                <td>1 hour </td>
+                <td>$85 <span class="tag is-Danger">Most Popular</span></td>
+              </tr>
+              <tr>
+                <td>1 hour 15 mins</td>
+                <td>$110</td>
+              </tr>
+              <tr>
+                <td>1 hour 30 mins</td>
+                <td>$130</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="control">
+            <a class="button is-primary" href="javascript:void(0);" onclick="bookingAromaButton.start();">
+              <span class="icon">
+                <i class="fas fa-calendar-alt"></i>
+              </span>
+              <span>Book Now</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section service">
+    <div class="container">
+      <h1 class="title">
+        Pregnancy/Prenatal Massage
+      </h1>
+      <div class="columns">
+        <div class="column is-half-desktop is-offset-one-quarter-desktop">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <th>Time</th>
+              <th>Price</th>
+            </thead>
+            <tbody>
+              <tr class="is-selected">
+                <td>1 hour </td>
+                <td>$85 <span class="tag is-Danger">Most Popular</span></td>
+              </tr>
+              <tr>
+                <td>1 hour 30 mins</td>
+                <td>$130</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="control">
+            <a class="button is-primary" href="javascript:void(0);" onclick="bookingPregnancyButton.start();">
+              <span class="icon">
+                <i class="fas fa-calendar-alt"></i>
+              </span>
+              <span>Book Now</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </section>
+  <footer class="footer has-text-centered">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-8-desktop is-offset-2-desktop">
+          <p>
+            <small>
+              Source code licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+            </small>
+          </p>
+          <p style="margin-top: 1rem;">
+            <a href="http://bulma.io">
+              <img src="images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="lib/main.js"></script>
+</body>
+
+</html>

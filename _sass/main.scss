@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+// Customization
+
+// Google font
+@import url("https://fonts.googleapis.com/css?family=Bad+Script|Caveat");
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #eec5c5;
+$pink-invert: #111111;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+.navbar-brand {
+  a:hover {
+    color: $pink-invert;
+  }
+  .navbar-logo {
+    font-family: "Caveat";
+  }
+}
+
+.title {
+  font-family: "Caveat";
+}
+.hero {
+  .hero-has-bg {
+    background-image: linear-gradient(
+        to right,
+        rgba(#a8a4a4, 0.8),
+        rgba($primary, 0.8)
+      ),
+      url("../images/hero.jpg");
+    background-size: 100vw 50%, cover;
+  }
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 50%;
+  height: 0;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+// blockquote {
+//   opacity: 1;
+//   background: #f9f9f9;
+//   border-left: 10px solid #ccc;
+//   margin: 1.5em 10px;
+//   padding: 0.5em 10px;
+//   quotes: "\201C" "\201D" "\2018" "\2019";
+
+//   transition: all 1s ease;
+//   &:before {
+//     color: #ccc;
+//     content: open-quote;
+//     font-size: 4em;
+//     line-height: 0.1em;
+//     margin-right: 0.25em;
+//     vertical-align: -0.4em;
+//   }
+//   p {
+//     display: block;
+//   }
+
+//   .hide {
+//     opacity: 0;
+//   }
+// }
+.blockquote {
+  height: auto;
+  .quote {
+    font-family: "Bad Script", "Arial", sans-serif;
+    font-size: 2rem;
+  }
+  .columns {
+    opacity: 0;
+    height: 0;
+    transform: scaleY(0);
+    transition: all 1s ease;
+  }
+  .show {
+    opacity: 1;
+    transform: scaleY(1);
+    height: auto;
+    // max-height: auto;
+  }
+}
+
+// 4. Import the rest of Bulma
+@import "../node_modules/bulma/bulma";
