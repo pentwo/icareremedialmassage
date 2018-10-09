@@ -90,7 +90,7 @@ function showQuote(num) {
   }
 }
 
-let interval = 10000;
+let interval = 15000;
 let initial = 1;
 randomQuote();
 function randomQuote() {
