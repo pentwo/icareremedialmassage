@@ -26,11 +26,6 @@
       property="og:description"
       content="Remedial/Sports Massage is also known as injury treatment massage. Unlike relaxation massage, remedial/sports massage is designed to deal with specific pain points, sports injuries or musculoskeletal discomfort. Pregnancy massage eases many discomforts- helps to support the changes through the pelvis and spine. Eases ligamentous pain and balances the pelvis in preparation for birth."
     />
-    <!-- timely booking widget -->
-    <script
-      id="timelyScript"
-      src="//book.gettimely.com/widget/book-button-v1.4.js"
-    ></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -65,6 +60,21 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         };
         gtag("event", "conversion", {
           send_to: "AW-784873740/pmhHCPmHqpIBEIzyoPYC",
+          event_callback: callback
+        });
+        return false;
+      }
+    </script>
+    <!-- Event snippet for Online Booking conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function() {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-784873740/t02qCOjNsJIBEIzyoPYC",
           event_callback: callback
         });
         return false;
@@ -126,10 +136,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <div class="navbar-item">
             <div class="field is-grouped">
               <p class="control">
-                <!--
-                  <a class="button is-primary" href="javascript:void(0);" onclick="bookingButton.start();">
-                -->
                 <a
+                  onclick="return gtag_report_conversion('https://wuasianmassage.mylocalsalon.com/onlinebooking/v7410/Steps/SelectServices.aspx')"
                   class="button is-primary"
                   href="https://wuasianmassage.mylocalsalon.com/onlinebooking/v7410/Steps/SelectServices.aspx"
                 >
@@ -144,9 +152,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <div class="navbar-item">
             <div class="field is-grouped">
               <p class="control">
-                <!--
-                  <a class="button is-primary" href="javascript:void(0);" onclick="bookingButton.start();">
-                -->
                 <a
                   class="button is-primary"
                   href="https://www.wusdayspanmassage.com.au/price/gift-voucher/"
@@ -170,10 +175,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               <h2 class="subtitle is-4">The best time to take care of you</h2>
               <div class="field is-grouped">
                 <p class="control">
-                  <!--
-                    <a class="button is-large is-primary" href="javascript:void(0);" onclick="bookingButton.start();">
-                  -->
                   <a
+                    onclick="return gtag_report_conversion('https://wuasianmassage.mylocalsalon.com/onlinebooking/v7410/Steps/SelectServices.aspx')"
                     class="button is-large is-primary"
                     href="https://wuasianmassage.mylocalsalon.com/onlinebooking/v7410/Steps/SelectServices.aspx"
                   >

@@ -18,11 +18,59 @@
       crossorigin="anonymous"
     />
 
-    <!-- timely booking widget -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
-      id="timelyScript"
-      src="//book.gettimely.com/widget/book-button-v1.4.js"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-126836067-1"
     ></script>
+
+    <!-- Global site tag (gtag.js) - Google Ads: 784873740 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-784873740"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-784873740");
+    </script>
+
+    <!-- Event snippet for website phone number conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function() {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-784873740/pmhHCPmHqpIBEIzyoPYC",
+          event_callback: callback
+        });
+        return false;
+      }
+    </script>
+    <!-- Event snippet for Online Booking conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function() {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-784873740/t02qCOjNsJIBEIzyoPYC",
+          event_callback: callback
+        });
+        return false;
+      }
+    </script>
   </head>
 
   <body>
@@ -79,10 +127,8 @@
           <div class="navbar-item">
             <div class="field is-grouped">
               <p class="control">
-                <!--
-                  <a class="button is-primary" href="javascript:void(0);" onclick="bookingButton.start();">
-                -->
                 <a
+                  onclick="return gtag_report_conversion('https://wuasianmassage.mylocalsalon.com/onlinebooking/v7410/Steps/SelectServices.aspx')"
                   class="button is-primary"
                   href="https://wuasianmassage.mylocalsalon.com/onlinebooking/v7410/Steps/SelectServices.aspx"
                 >
@@ -97,9 +143,6 @@
           <div class="navbar-item">
             <div class="field is-grouped">
               <p class="control">
-                <!--
-                  <a class="button is-primary" href="javascript:void(0);" onclick="bookingButton.start();">
-                -->
                 <a
                   class="button is-primary"
                   href="https://www.wusdayspanmassage.com.au/price/gift-voucher/"
