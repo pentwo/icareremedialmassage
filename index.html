@@ -38,7 +38,6 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=AW-784873740"
     ></script>
-
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -47,6 +46,7 @@
       gtag("js", new Date());
 
       gtag("config", "AW-784873740");
+      gtag("config", "UA-126836067-1");
     </script>
 
     <!-- Event snippet for website phone number conversion page
@@ -65,7 +65,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         return false;
       }
     </script>
-    <!-- Event snippet for Online Booking conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+
+    <!-- Event snippet for Online Booking conversion page
+  In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
       function gtag_report_conversion(url) {
         var callback = function() {
