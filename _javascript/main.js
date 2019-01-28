@@ -80,7 +80,7 @@ function setTestimonyTemplate(arr) {
 
 function showQuote(num) {
   let ele = document.querySelector(`#testimony-${num}`);
-  console.log("ele: ", ele);
+
   let eleShow = document.querySelector(".show");
   if (eleShow) {
     eleShow.classList.remove("show");
@@ -102,12 +102,3 @@ function randomQuote() {
   initial++;
   setTimeout(randomQuote, interval);
 }
-
-// Google Analytics
-window.dataLayer = window.dataLayer || [];
-
-function gtag() {
-  dataLayer.push(arguments);
-}
-gtag("js", new Date());
-gtag("config", "UA-126836067-1");

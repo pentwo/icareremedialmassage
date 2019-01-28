@@ -32,12 +32,6 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-126836067-1"
     ></script>
-
-    <!-- Global site tag (gtag.js) - Google Ads: 784873740 -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-784873740"
-    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -45,42 +39,8 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "AW-784873740");
       gtag("config", "UA-126836067-1");
-    </script>
-
-    <!-- Event snippet for website phone number conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-    <script>
-      function gtag_report_conversion(url) {
-        var callback = function() {
-          if (typeof url != "undefined") {
-            window.location = url;
-          }
-        };
-        gtag("event", "conversion", {
-          send_to: "AW-784873740/pmhHCPmHqpIBEIzyoPYC",
-          event_callback: callback
-        });
-        return false;
-      }
-    </script>
-
-    <!-- Event snippet for Online Booking conversion page
-  In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-    <script>
-      function gtag_report_conversion(url) {
-        var callback = function() {
-          if (typeof url != "undefined") {
-            window.location = url;
-          }
-        };
-        gtag("event", "conversion", {
-          send_to: "AW-784873740/t02qCOjNsJIBEIzyoPYC",
-          event_callback: callback
-        });
-        return false;
-      }
+      gtag("config", "AW-784873740");
     </script>
   </head>
 
@@ -203,9 +163,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         </div>
       </div>
     </section>
+
     <section class="section has-text-centered">
       <figure><img src="./images/jennyad.jpg" alt="ad" /></figure>
     </section>
+
     <section class="section about">
       <div class="container">
         <h1 class="title">Who am I?</h1>
@@ -319,9 +281,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       </div>
     </footer>
 
-    <!--
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBc9cG_57WPrgfEZVAf_H5lsNlS-Aq5Slw&libraries=places&callback=initMap"> </script>
-    -->
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBc9cG_57WPrgfEZVAf_H5lsNlS-Aq5Slw&libraries=places&callback=initMap"
+    ></script>
 
     <script type="text/javascript" src="lib/main.js"></script>
     <style></style>
